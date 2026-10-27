@@ -1,0 +1,155 @@
+{
+  "checkedAt": "2026-10-27",
+  "genres": [
+    {
+      "id": "house",
+      "name": "House",
+      "source": "Beatport",
+      "url": "https://www.beatport.com/genre/house/5/top-100",
+      "asOf": "2026-10-25",
+      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Think of You",
+          "artist": "Prospa, Kettama, Rohan Pinnock-Hamilton",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 2,
+          "title": "Fancy Footwork",
+          "artist": "Chromeo, Chris Lorenzo",
+          "released": "2026-09-30",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 3,
+          "title": "Flashing Lights",
+          "artist": "DANIS (TS), Trace (UZ), DISLA (UZ)",
+          "released": "2026-09-25",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 4,
+          "title": "H.O.U.S.E",
+          "artist": "Snoop Dogg, HUGEL",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 5,
+          "title": "1997",
+          "artist": "Beave",
+          "released": "2026-08-27",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null
+        }
+      ]
+    },
+    {
+      "id": "deep-house",
+      "name": "Deep house",
+      "source": "Beatport",
+      "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+      "asOf": "2026-10-25",
+      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Marido Dansa",
+          "artist": "Franky Rizardo",
+          "released": "2026-10-02",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 2,
+          "title": "Trapped",
+          "artist": "Kolter",
+          "released": "2026-04-10",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 3,
+          "title": "Need A Stretchhh",
+          "artist": "Renceau",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 4,
+          "title": "Breather",
+          "artist": "S.A.M., CHRIS STASSY",
+          "released": "2021-06-04",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null
+        },
+        {
+          "rank": 5,
+          "title": "What We Got",
+          "artist": "Midas Field, Marijn Jansen",
+          "released": "2026-08-07",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null
+        }
+      ]
+    },
+    {
+      "id": "hardstyle",
+      "name": "Hardstyle",
+      "source": "Hardstyle.com",
+      "url": "https://hardstyle.com/en/charts?genre=hardstyle",
+      "asOf": "2026-10-27",
+      "note": "Otse allika Hardstyle Top 100 tabelist.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Que Rico",
+          "artist": "Galactixx, Zany",
+          "released": "2026-10-15",
+          "url": "https://hardstyle.com/en/tracks/d5511e11-9f83-469b-a92c-34723d6eb50c/que-rico",
+          "newEntry": null
+        },
+        {
+          "rank": 2,
+          "title": "This Feeling",
+          "artist": "Da Tweekaz, Rebelion",
+          "released": "2026-10-16",
+          "url": "https://hardstyle.com/en/tracks/2a8ba26b-7ce3-4f50-a991-0fd707084f4c/this-feeling",
+          "newEntry": null
+        },
+        {
+          "rank": 3,
+          "title": "Embers",
+          "artist": "D-Block & S-te-Fan",
+          "released": "2026-10-02",
+          "url": "https://hardstyle.com/en/tracks/3e336efe-80c3-445e-b084-1233f760223d/embers",
+          "newEntry": null
+        },
+        {
+          "rank": 4,
+          "title": "Heart Of A Dragon",
+          "artist": "Ran-D, Brennan Heart",
+          "released": "2026-10-09",
+          "url": "https://hardstyle.com/en/tracks/b467175d-91fb-4efd-8f76-63fbd3a5ae5a/heart-of-a-dragon",
+          "newEntry": null
+        },
+        {
+          "rank": 5,
+          "title": "KICKPONG",
+          "artist": "Mutilator",
+          "released": "2026-10-23",
+          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
+          "newEntry": null
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eesti Muusika Radar · DJ Kristjan Orula</title>
+<title>Eesti Muusika Radar · DJ Krisor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -136,18 +136,34 @@
   footer{margin:54px 0 40px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
   footer .gold{color:var(--gold-soft)}
   a.inline{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
+
+  .world-intro{max-width:780px;color:var(--muted)}
+  .world-toolbar{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:20px 0 12px}
+  .world-filter{font-size:14px;cursor:pointer}.world-filter input{accent-color:var(--gold);margin-right:6px}
+  .world-note{color:var(--muted);font-size:12px;margin-bottom:20px}
+  .world-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .world-grid .panel h3{font-size:18px;letter-spacing:.06em;flex-wrap:wrap;gap:8px}
+  .chart-meta{padding:12px 20px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}
+  .chart-list{list-style:none}.chart-row{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;gap:12px}
+  .chart-rank{color:var(--gold);font-family:'Anton',sans-serif;font-size:23px;min-width:24px}
+  .chart-title{color:var(--text);text-decoration:none;font-weight:600;overflow-wrap:anywhere}.chart-title:hover{color:var(--gold)}
+  .chart-artist{font-size:13px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+  .chart-date{font-size:11px;color:var(--muted);margin-top:7px}.chart-new{color:var(--green);font-size:11px;margin-left:8px}
+  .chart-foot{padding:14px 20px;font-size:12px;color:var(--muted)}.chart-foot a{color:var(--gold)}
+  .chart-warning{color:var(--gold-soft)}a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  @media(max-width:900px){.world-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <div class="kicker">DJ Tööriist · Eesti repertuaar</div>
+    <div class="kicker">DJ Tööriist · Eesti ja maailma muusika</div>
     <h1>Eesti Muusika <span class="gold">Radar</span></h1>
-    <p class="sub">Kõik värske eestikeelne muusika ühes vaates — elav pleilist, uued väljalasked ja kõik olulised raadioedetabelid. Hoia repertuaar alati ajakohane.</p>
+    <p class="sub">Kõik värske eestikeelne muusika ühes vaates — elav pleilist, uued väljalasked ja kõik olulised raadioedetabelid. Lisaks maailma house, deep house ja hardstyle — iganädalane klubimuusika ülevaade.</p>
     <div class="meta">
       <span class="chip live">Elav voog</span>
-      <span class="chip">Kristjan Orula</span>
+      <span class="chip">Krisor</span>
       <span class="chip" id="today">—</span>
     </div>
   </header>
@@ -159,7 +175,7 @@
       <div class="panel spot">
         <h3>Spotify · Uus Eesti muusika 2026 <a href="https://open.spotify.com/playlist/2GeJr5gKZVCElA4bRgQWiA" target="_blank" rel="noopener">Ava Spotifys ↗</a></h3>
         <iframe src="https://open.spotify.com/embed/playlist/2GeJr5gKZVCElA4bRgQWiA?utm_source=generator&theme=0"
-                loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Uus Eesti muusika Spotify esitusloend"></iframe>
       </div>
       <div class="panel">
         <h3>Uued väljalasked & uudised <a href="https://muusikaplaneet.ee/" target="_blank" rel="noopener">MuusikaPlaneet ↗</a></h3>
@@ -207,9 +223,19 @@
     </div>
   </section>
 
-  <!-- 03 ROUTINE -->
+
+  <section class="sec" id="world" aria-labelledby="world-title">
+    <div class="sec-head"><span class="num">03</span><h2 id="world-title">Maailma klubimuusika</h2><span class="rule"></span></div>
+    <p class="world-intro">House, deep house ja hardstyle — rahvusvaheliste žanriedetabelite TOP 5. Nädalane ülevaade aitab leida repertuaari uusi lugusid; edetabelis võib olla ka vanemaid hitte.</p>
+    <div class="world-toolbar"><span class="chip">Uuendus esmaspäeviti</span><label class="world-filter"><input type="checkbox" id="new-releases"> Ainult viimase 30 päeva väljalasked</label></div>
+    <p class="world-note">„Uus TOP 5-s” tähendab muutust eelmise ülevaatega võrreldes. Esimene ülevaade on võrdluse lähtepunkt. Kuupäevata lood väljalaskefiltris ei ilmu.</p>
+    <div id="world-charts" class="world-grid" aria-live="polite"><p>Laen edetabeleid…</p></div>
+    <noscript><p>Edetabelite vaatamiseks lülita JavaScript sisse või ava <a class="inline" href="https://www.beatport.com/genre/house/5/top-100">Beatport House</a>, <a class="inline" href="https://www.beatport.com/genre/deep-house/12/top-100">Beatport Deep House</a> ja <a class="inline" href="https://hardstyle.com/en/charts?genre=hardstyle">Hardstyle Top 100</a>.</p></noscript>
+  </section>
+
+  <!-- 04 ROUTINE -->
   <section class="sec">
-    <div class="sec-head"><span class="num">03</span><h2>Iganädalane rutiin</h2><span class="rule"></span></div>
+    <div class="sec-head"><span class="num">04</span><h2>Iganädalane rutiin</h2><span class="rule"></span></div>
     <div class="routine">
       <div class="step">
         <span class="freq">1×/nädal</span>
@@ -239,7 +265,7 @@
   </section>
 
   <footer>
-    <span>Eesti Muusika Radar · <span class="gold">DJ Kristjan Orula</span></span>
+    <span>Eesti Muusika Radar · <span class="gold">DJ Krisor</span></span>
     <span>Allikad: <a class="inline" href="https://muusikaplaneet.ee/" target="_blank" rel="noopener">MuusikaPlaneet</a> · <a class="inline" href="https://open.spotify.com/playlist/2GeJr5gKZVCElA4bRgQWiA" target="_blank" rel="noopener">Spotify</a> · ERR</span>
   </footer>
 
@@ -312,5 +338,6 @@
     tryProxy(0);
   })();
 </script>
+<script src="world-charts.js"></script>
 </body>
 </html>
