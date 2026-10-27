@@ -17,3 +17,13 @@ Before replacing a snapshot, archive it to `data/archive/YYYY-MM-DD.json` (do no
 ## Checks
 
 Run `node --check world-charts.js`, validate JSON structure, inspect `git diff --check`, and preview the page at desktop and mobile widths. Verify all three panels, recent-release filter, empty states and direct source links. No build or package installation is required. GitHub Pages publishes from `main` / root.
+
+## Listening layout and MuusikaPlaneet
+
+The page is now listening-first: two discovery panels, genre buttons with one TOP 5 visible, then news and source links. `styles.css` contains responsive layout and `app.js` owns the shared lazy-loaded track player. The first Spotify playlist is independent; only one additional track iframe is mounted at a time.
+
+Run `node scripts/update-estonian.mjs` to refresh all three verified 2026 MuusikaPlaneet period pages and RSS headlines. It writes `data/estonian-releases.json` and `data/news.json`. Date-based quarter filtering occurs in the browser. The source periods are four-month groups, not calendar quarters. A failed period fetch/parse must not replace the previous release snapshot. Do not change the year/source URLs automatically without checking next year's pages.
+
+World chart tracks may contain a `spotify` object with verified `id`, `name`, `artist`, `url`, and `cover`. Preserve it when updating a retained track. Resolve new tracks by title AND artist; never reuse the prior row's player ID for a different song. Streaming edits can differ from the chart version. Never store expiring Spotify natural-language playback URIs. Without a verified Spotify match the UI falls back to the chart source link.
+
+Checks: `node --check app.js`, `node --check world-charts.js`, `node --test scripts/update-estonian.test.mjs`, `git diff --check`; browser checks for quarter selection, more rows, genre filter, one active track player, and 320/390/412 px widths. See AUDIT.md for findings, recommendations and device-test limits.

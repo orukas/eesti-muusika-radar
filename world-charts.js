@@ -1,74 +1,14 @@
-(async function () {
-  const container = document.getElementById('world-charts');
-  const filter = document.getElementById('new-releases');
-  const dateFormat = new Intl.DateTimeFormat('et-EE', {timeZone: 'Europe/Tallinn'});
-  const fmt = value => dateFormat.format(new Date(value + 'T12:00:00Z'));
-  const element = (tag, className, text) => {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text) node.textContent = text;
-    return node;
-  };
-  function link(text, url, className) {
-    const node = element('a', className, text);
-    const parsed = new URL(url);
-    if (parsed.protocol !== 'https:') throw new Error('Invalid source URL');
-    node.href = parsed.href;
-    node.target = '_blank';
-    node.rel = 'noopener noreferrer';
-    return node;
+(async()=>{
+ const {el,format,safeLink,playButton,closePlayer,fetchJSON}=window.Radar;
+ const container=document.getElementById('world-charts'),filter=document.getElementById('new-releases');let selected='house';
+ try{
+  const data=await fetchJSON('data/world-charts.json');
+  function render(){closePlayer();const genre=data.genres.find(g=>g.id===selected);if(!genre)throw Error('Missing genre');const panel=el('article','panel');const meta=el('div','chart-meta');meta.append(el('h3','',genre.name+' TOP 5'));const stale=Date.now()-Date.parse(genre.asOf+'T23:59:59Z')>8*86400000;meta.append(el('span',stale?'chart-warning':'','Allika seis '+format(genre.asOf+'T12:00:00Z')+(stale?' · Uuendus ootel':'')),safeLink(genre.source+' ↗',genre.url,'text-link'));panel.append(meta);const list=el('ol','chart-list');
+   const tracks=genre.tracks.filter(t=>!filter.checked||(t.released&&Date.now()-Date.parse(t.released+'T00:00:00Z')>=0&&Date.now()-Date.parse(t.released+'T00:00:00Z')<30*86400000));
+   for(const track of tracks){const row=el('li','chart-row'),main=el('div','track-main'),details=el('div'),host=el('div','track-player');host.hidden=true;main.append(el('span','chart-rank',String(track.rank).padStart(2,'0')));if(track.spotify?.cover){const img=el('img','track-cover');img.src=track.spotify.cover;img.alt='';img.width=52;img.height=52;img.loading='lazy';main.append(img);}else main.append(el('span','track-cover'));
+    details.append(el('p','chart-title',track.title),el('p','chart-artist',track.artist),el('p','chart-date',track.released?'Ilmunud '+format(track.released+'T12:00:00Z'):'Ilmumiskuupäev teadmata'));if(track.newEntry)details.append(el('span','chart-new','Uus TOP 5-s'));main.append(details);const actions=el('div','track-actions');if(track.spotify){actions.append(safeLink('Spotify ↗',track.spotify.url));actions.append(playButton({provider:'spotify',type:'track',id:track.spotify.id,url:track.spotify.url},track.spotify.name,host));}else actions.append(safeLink('Allikas ↗',track.url,'text-link'));main.append(actions);row.append(main,host);list.append(row);
+   }panel.append(list);if(!tracks.length)panel.append(el('p','state','Selles TOP 5-s pole viimase 30 päeva väljalaskeid. Lülita filter välja, et näha kõiki lugusid.'));const foot=el('p','chart-foot',genre.note+' ');foot.append(safeLink('Täielik edetabel ↗',genre.url));panel.append(foot);container.replaceChildren(panel);
   }
-  try {
-    const response = await fetch('data/world-charts.json', {cache: 'no-cache', signal: AbortSignal.timeout(15000)});
-    if (!response.ok) throw new Error('Chart data unavailable');
-    const data = await response.json();
-    function render() {
-      const fragment = document.createDocumentFragment();
-      for (const genre of data.genres) {
-        const panel = element('article', 'panel');
-        const heading = element('h3', '', genre.name);
-        heading.append(link(genre.source + ' ↗', genre.url));
-        panel.append(heading);
-        const stale = Date.now() - Date.parse(genre.asOf + 'T23:59:59Z') > 8 * 86400000;
-        panel.append(element('p', 'chart-meta' + (stale ? ' chart-warning' : ''),
-          'Allika seis: ' + fmt(genre.asOf) + (stale ? ' · Uuendus on ootel' : '')));
-        const tracks = genre.tracks.filter(track => {
-          if (!filter.checked) return true;
-          if (!track.released) return false;
-          const age = Date.now() - Date.parse(track.released + 'T00:00:00Z');
-          return age >= 0 && age < 30 * 86400000;
-        });
-        const list = element('ol', 'chart-list');
-        for (const track of tracks) {
-          const row = element('li', 'chart-row');
-          row.append(element('span', 'chart-rank', String(track.rank).padStart(2, '0')));
-          const details = element('div');
-          details.append(link(track.title, track.url, 'chart-title'));
-          if (track.newEntry === true) details.append(element('span', 'chart-new', 'Uus TOP 5-s'));
-          details.append(element('p', 'chart-artist', track.artist));
-          details.append(element('p', 'chart-date', track.released ? 'Ilmunud ' + fmt(track.released) : 'Ilmumiskuupäev allikas puudub'));
-          row.append(details);
-          list.append(row);
-        }
-        panel.append(list);
-        if (!tracks.length) panel.append(element('p', 'feed-state', 'Selles TOP 5-s pole teadaoleva kuupäevaga viimase 30 päeva väljalaskeid.'));
-        panel.append(element('p', 'chart-foot', genre.note));
-        const foot = element('p', 'chart-foot');
-        foot.append(link('Ava täielik edetabel ↗', genre.url));
-        panel.append(foot);
-        fragment.append(panel);
-      }
-      container.replaceChildren(fragment);
-    }
-    filter.addEventListener('change', render);
-    render();
-  } catch (error) {
-    container.replaceChildren(element('p', 'feed-state', 'Edetabelite laadimine ei õnnestunud. Ava allikad otse:'));
-    for (const [name, url] of [
-      ['Beatport House', 'https://www.beatport.com/genre/house/5/top-100'],
-      ['Beatport Deep House', 'https://www.beatport.com/genre/deep-house/12/top-100'],
-      ['Hardstyle Top 100', 'https://hardstyle.com/en/charts?genre=hardstyle']
-    ]) container.append(link(name, url, 'card'));
-    filter.disabled = true;
-  }
+  document.querySelectorAll('[data-genre]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.genre;document.querySelectorAll('[data-genre]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}));filter.addEventListener('change',render);render();
+ }catch{const p=el('p','state','Edetabeleid ei saanud laadida. Ava allikad: ');[['House','https://www.beatport.com/genre/house/5/top-100'],['Deep house','https://www.beatport.com/genre/deep-house/12/top-100'],['Hardstyle','https://hardstyle.com/en/charts']].forEach(([name,url])=>{p.append(safeLink(name+' ↗ ',url));});container.replaceChildren(p);filter.disabled=true;}
 })();
