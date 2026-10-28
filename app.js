@@ -26,6 +26,5 @@
       quarter.addEventListener('change',()=>{limit=12;render();document.querySelector('.release-scroll').scrollTop=0;});document.getElementById('more-releases').addEventListener('click',()=>{limit+=12;render();});render();
     }catch{list.replaceChildren(el('li','state','Lugude nimekirja laadimine ei õnnestunud. Ava MuusikaPlaneedi algallikas alloleva lingiga.'));quarter.disabled=true;document.getElementById('more-releases').hidden=true;}
   }
-  async function loadNews(){const feed=document.getElementById('feed');try{const data=await fetchJSON('data/news.json');const frag=document.createDocumentFragment();for(const item of data.items){const a=safeLink('',item.url,'feed-item');a.append(el('strong','',item.title),el('time','',format(item.date)));frag.append(a);}feed.replaceChildren(frag);}catch{const p=el('p','state','Uudised on saadaval otse allikas: ');p.append(safeLink('MuusikaPlaneet ↗','https://muusikaplaneet.ee/'));feed.replaceChildren(p);}}
-  loadReleases();loadNews();
+  loadReleases();
 })();
