@@ -1,0 +1,77 @@
+name: Weekly music and Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+    - cron: '0 7 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: music-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Tallinn schedule gate
+        id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const summer=new Intl.DateTimeFormat('en',{timeZone:'Europe/Tallinn',timeZoneName:'shortOffset'}).format(new Date()).includes('GMT+3');
+          const run=process.env.EVENT!=='schedule'||process.env.CRON===(summer?'0 6 * * 1':'0 7 * * 1');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`run=${run}\n`);
+          JS
+      - name: Validate scripts
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          node --check app.js
+          node --check world-charts.js
+          node --test scripts/*.test.mjs
+      - name: Refresh public music sources
+        if: steps.gate.outputs.run == 'true' && github.event_name != 'push'
+        run: node scripts/update-all.mjs
+      - name: Save checked snapshots
+        if: steps.gate.outputs.run == 'true' && github.event_name != 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update weekly music snapshots'
+            git push origin HEAD:main
+          fi
+      - name: Prepare public files
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          mkdir -p _site
+          cp index.html styles.css app.js world-charts.js _site/
+          cp -r data _site/data
+      - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.run == 'true'
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          path: _site
+          retention-days: 1
+      - uses: actions/deploy-pages@v4
+        if: steps.gate.outputs.run == 'true'
+        id: deployment

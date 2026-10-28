@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "genres": [
     {
       "id": "house",
@@ -7,7 +7,7 @@
       "source": "Beatport",
       "url": "https://www.beatport.com/genre/house/5/top-100",
       "asOf": "2026-10-25",
-      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "note": "Automaatne kontroll ebaõnnestus; säilitatud viimati kontrollitud tabel.",
       "tracks": [
         {
           "rank": 1,
@@ -92,7 +92,7 @@
       "source": "Beatport",
       "url": "https://www.beatport.com/genre/deep-house/12/top-100",
       "asOf": "2026-10-25",
-      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "note": "Automaatne kontroll ebaõnnestus; säilitatud viimati kontrollitud tabel.",
       "tracks": [
         {
           "rank": 1,
@@ -176,16 +176,16 @@
       "name": "Hardstyle",
       "source": "Hardstyle.com",
       "url": "https://hardstyle.com/en/charts?genre=hardstyle",
-      "asOf": "2026-10-27",
-      "note": "Otse allika Hardstyle Top 100 tabelist.",
+      "asOf": "2026-10-28",
+      "note": "Kontrollitud otse allikast. Automaatne pilveuuendus.",
       "tracks": [
         {
           "rank": 1,
           "title": "Que Rico",
           "artist": "Galactixx, Zany",
-          "released": "2026-10-15",
           "url": "https://hardstyle.com/en/tracks/d5511e11-9f83-469b-a92c-34723d6eb50c/que-rico",
-          "newEntry": null,
+          "released": "2026-10-15",
+          "newEntry": false,
           "spotify": {
             "id": "0S51t2Lz2wwwiy2J9MRAmx",
             "name": "Que Rico",
@@ -198,9 +198,9 @@
           "rank": 2,
           "title": "This Feeling",
           "artist": "Da Tweekaz, Rebelion",
-          "released": "2026-10-16",
           "url": "https://hardstyle.com/en/tracks/2a8ba26b-7ce3-4f50-a991-0fd707084f4c/this-feeling",
-          "newEntry": null,
+          "released": "2026-10-16",
+          "newEntry": false,
           "spotify": {
             "id": "6k7UlqkMHBhdcgbEqum62k",
             "name": "This Feeling",
@@ -211,11 +211,26 @@
         },
         {
           "rank": 3,
+          "title": "KICKPONG",
+          "artist": "Mutilator",
+          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
+          "released": "2026-10-23",
+          "newEntry": false,
+          "spotify": {
+            "id": "4gwCiRljRZCWp2oqCBW8GJ",
+            "name": "KICKPONG",
+            "artist": "The Saints, Mutilator",
+            "url": "https://open.spotify.com/track/4gwCiRljRZCWp2oqCBW8GJ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=3c1b788d-bd6c-420e-bd7e-ff81123d2939",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02dc9a7106f89d60fce53e1dc3"
+          }
+        },
+        {
+          "rank": 4,
           "title": "Embers",
           "artist": "D-Block & S-te-Fan",
-          "released": "2026-10-02",
           "url": "https://hardstyle.com/en/tracks/3e336efe-80c3-445e-b084-1233f760223d/embers",
-          "newEntry": null,
+          "released": "2026-10-02",
+          "newEntry": false,
           "spotify": {
             "id": "0UnZxfPhkox7pIn7IEzquD",
             "name": "Embers",
@@ -225,33 +240,18 @@
           }
         },
         {
-          "rank": 4,
+          "rank": 5,
           "title": "Heart Of A Dragon",
           "artist": "Ran-D, Brennan Heart",
-          "released": "2026-10-09",
           "url": "https://hardstyle.com/en/tracks/b467175d-91fb-4efd-8f76-63fbd3a5ae5a/heart-of-a-dragon",
-          "newEntry": null,
+          "released": "2026-10-09",
+          "newEntry": false,
           "spotify": {
             "id": "5FKpVXEuq3qsuKeoAlLpnX",
             "name": "Heart Of A Dragon",
             "artist": "Ran-D, Brennan Heart, Floor Jansen",
             "url": "https://open.spotify.com/track/5FKpVXEuq3qsuKeoAlLpnX?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=ba661e45-b16b-4838-9385-27e0d0def735",
             "cover": "https://i.scdn.co/image/ab67616d00001e020bc7ec2bcb244780a530a742"
-          }
-        },
-        {
-          "rank": 5,
-          "title": "KICKPONG",
-          "artist": "Mutilator",
-          "released": "2026-10-23",
-          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
-          "newEntry": null,
-          "spotify": {
-            "id": "4gwCiRljRZCWp2oqCBW8GJ",
-            "name": "KICKPONG",
-            "artist": "The Saints, Mutilator",
-            "url": "https://open.spotify.com/track/4gwCiRljRZCWp2oqCBW8GJ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=3c1b788d-bd6c-420e-bd7e-ff81123d2939",
-            "cover": "https://i.scdn.co/image/ab67616d00001e02dc9a7106f89d60fce53e1dc3"
           }
         }
       ]

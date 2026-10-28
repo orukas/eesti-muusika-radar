@@ -1,0 +1,260 @@
+{
+  "checkedAt": "2026-10-27",
+  "genres": [
+    {
+      "id": "house",
+      "name": "House",
+      "source": "Beatport",
+      "url": "https://www.beatport.com/genre/house/5/top-100",
+      "asOf": "2026-10-25",
+      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Think of You",
+          "artist": "Prospa, Kettama, Rohan Pinnock-Hamilton",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "0sPP9TW0xSgke7EKBW6Gui",
+            "name": "Think of You",
+            "artist": "KETTAMA, Prospa, Rohan Pinnock-Hamilton",
+            "url": "https://open.spotify.com/track/0sPP9TW0xSgke7EKBW6Gui?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=2f75cfdf-9702-44b7-809d-c14277423643",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02905df05c683b600c87832fb7"
+          }
+        },
+        {
+          "rank": 2,
+          "title": "Fancy Footwork",
+          "artist": "Chromeo, Chris Lorenzo",
+          "released": "2026-09-30",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "0BK6ACxpzK8nkWa3YKuunX",
+            "name": "Fancy Footwork",
+            "artist": "Chris Lorenzo, Chromeo",
+            "url": "https://open.spotify.com/track/0BK6ACxpzK8nkWa3YKuunX?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=38c58ad0-9266-4aa7-8d5e-7643fa604118",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02a1822f067bbc55699e5722dc"
+          }
+        },
+        {
+          "rank": 3,
+          "title": "Flashing Lights",
+          "artist": "DANIS (TS), Trace (UZ), DISLA (UZ)",
+          "released": "2026-09-25",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "6T43o0Jt5xqTz78j5XVhg7",
+            "name": "Flashing Lights",
+            "artist": "Trace, Disla, Danis",
+            "url": "https://open.spotify.com/track/6T43o0Jt5xqTz78j5XVhg7?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=03e52cf7-75fb-48fe-b75f-8a9baec76bf8",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02eaf54f1a7eaedb4c3d9d88b7"
+          }
+        },
+        {
+          "rank": 4,
+          "title": "H.O.U.S.E",
+          "artist": "Snoop Dogg, HUGEL",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "1BTZKp1hBSeApqQh1ngqpZ",
+            "name": "H.O.U.S.E",
+            "artist": "HUGEL, Snoop Dogg",
+            "url": "https://open.spotify.com/track/1BTZKp1hBSeApqQh1ngqpZ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=a99b236e-c5a1-40ff-bbc3-eee3be1eefc9",
+            "cover": "https://i.scdn.co/image/ab67616d00001e0280b0e9f375fe05b07b3a446d"
+          }
+        },
+        {
+          "rank": 5,
+          "title": "1997",
+          "artist": "Beave",
+          "released": "2026-08-27",
+          "url": "https://www.beatport.com/genre/house/5/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "4rhLz3goPuMcJPkkqtX07g",
+            "name": "1997 - Extended Mix",
+            "artist": "Beave",
+            "url": "https://open.spotify.com/track/4rhLz3goPuMcJPkkqtX07g?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=49c045ba-2eaf-4f03-a8ae-120546f3926b",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02ca3f51b8753e03892263fe03"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deep-house",
+      "name": "Deep house",
+      "source": "Beatport",
+      "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+      "asOf": "2026-10-25",
+      "note": "Otsinguindeksi väljavõte; allika seis 25.10.2026.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Marido Dansa",
+          "artist": "Franky Rizardo",
+          "released": "2026-10-02",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "1wceODcNiRPq4kwo9vh3oE",
+            "name": "Marido Dansa",
+            "artist": "Franky Rizardo",
+            "url": "https://open.spotify.com/track/1wceODcNiRPq4kwo9vh3oE?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=7fa0f110-602f-4c95-86ff-c8bcf3a2db20",
+            "cover": "https://i.scdn.co/image/ab67616d00001e0243afb80ed05482c3d6b81360"
+          }
+        },
+        {
+          "rank": 2,
+          "title": "Trapped",
+          "artist": "Kolter",
+          "released": "2026-04-10",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "7LhaYxesZoZQ8b9WJGuLDx",
+            "name": "Trapped - Radio-Edit",
+            "artist": "Kolter",
+            "url": "https://open.spotify.com/track/7LhaYxesZoZQ8b9WJGuLDx?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=130e90cf-5274-4539-a789-e938faad5750",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02c9cbe77eaef040b65ca5530e"
+          }
+        },
+        {
+          "rank": 3,
+          "title": "Need A Stretchhh",
+          "artist": "Renceau",
+          "released": "2026-10-16",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "4Ifd8e27Quk1HeiKPOTCdO",
+            "name": "Need A Stretchhh",
+            "artist": "Renceau",
+            "url": "https://open.spotify.com/track/4Ifd8e27Quk1HeiKPOTCdO?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=a4047232-20e3-41a8-b25f-f768860baac6",
+            "cover": "https://i.scdn.co/image/ab67616d00001e027f999ba9473c16084e33b4b6"
+          }
+        },
+        {
+          "rank": 4,
+          "title": "Breather",
+          "artist": "S.A.M., CHRIS STASSY",
+          "released": "2021-06-04",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "2d5i2HUJpBVgM9aRkoQpVj",
+            "name": "Breather",
+            "artist": "CHRIS STASSY, S.A.M.",
+            "url": "https://open.spotify.com/track/2d5i2HUJpBVgM9aRkoQpVj?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=60e49ea6-392d-4576-8469-1c7d9905ea51",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02b2a942472bacd44fbf8d2bcb"
+          }
+        },
+        {
+          "rank": 5,
+          "title": "What We Got",
+          "artist": "Midas Field, Marijn Jansen",
+          "released": "2026-08-07",
+          "url": "https://www.beatport.com/genre/deep-house/12/top-100",
+          "newEntry": null,
+          "spotify": {
+            "id": "31pjp1EzkwhmLmdKzYAbFa",
+            "name": "What We Got",
+            "artist": "Midas Field, Marijn Jansen",
+            "url": "https://open.spotify.com/track/31pjp1EzkwhmLmdKzYAbFa?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=fdfe4850-d3dd-4b17-877f-c25ec2a5098d",
+            "cover": "https://i.scdn.co/image/ab67616d00001e025cdf51b737431820c1871765"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hardstyle",
+      "name": "Hardstyle",
+      "source": "Hardstyle.com",
+      "url": "https://hardstyle.com/en/charts?genre=hardstyle",
+      "asOf": "2026-10-27",
+      "note": "Otse allika Hardstyle Top 100 tabelist.",
+      "tracks": [
+        {
+          "rank": 1,
+          "title": "Que Rico",
+          "artist": "Galactixx, Zany",
+          "released": "2026-10-15",
+          "url": "https://hardstyle.com/en/tracks/d5511e11-9f83-469b-a92c-34723d6eb50c/que-rico",
+          "newEntry": null,
+          "spotify": {
+            "id": "0S51t2Lz2wwwiy2J9MRAmx",
+            "name": "Que Rico",
+            "artist": "Galactixx, Zany",
+            "url": "https://open.spotify.com/track/0S51t2Lz2wwwiy2J9MRAmx?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=b6cce9ff-4c83-4ec2-9c72-99a95b149557",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02edb7d6b15f7a7853694b74f7"
+          }
+        },
+        {
+          "rank": 2,
+          "title": "This Feeling",
+          "artist": "Da Tweekaz, Rebelion",
+          "released": "2026-10-16",
+          "url": "https://hardstyle.com/en/tracks/2a8ba26b-7ce3-4f50-a991-0fd707084f4c/this-feeling",
+          "newEntry": null,
+          "spotify": {
+            "id": "6k7UlqkMHBhdcgbEqum62k",
+            "name": "This Feeling",
+            "artist": "Da Tweekaz, Rebelion",
+            "url": "https://open.spotify.com/track/6k7UlqkMHBhdcgbEqum62k?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=c47cf105-1d3d-4008-8e14-0668f4c44d6b",
+            "cover": "https://i.scdn.co/image/ab67616d00001e021ba3f80603aa763ecaa405e4"
+          }
+        },
+        {
+          "rank": 3,
+          "title": "Embers",
+          "artist": "D-Block & S-te-Fan",
+          "released": "2026-10-02",
+          "url": "https://hardstyle.com/en/tracks/3e336efe-80c3-445e-b084-1233f760223d/embers",
+          "newEntry": null,
+          "spotify": {
+            "id": "0UnZxfPhkox7pIn7IEzquD",
+            "name": "Embers",
+            "artist": "D-Block & S-te-Fan",
+            "url": "https://open.spotify.com/track/0UnZxfPhkox7pIn7IEzquD?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=1c5c56ac-d1d3-4725-881e-c3f7069d639f",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02c7e2b264b0ed58868b8cc37d"
+          }
+        },
+        {
+          "rank": 4,
+          "title": "Heart Of A Dragon",
+          "artist": "Ran-D, Brennan Heart",
+          "released": "2026-10-09",
+          "url": "https://hardstyle.com/en/tracks/b467175d-91fb-4efd-8f76-63fbd3a5ae5a/heart-of-a-dragon",
+          "newEntry": null,
+          "spotify": {
+            "id": "5FKpVXEuq3qsuKeoAlLpnX",
+            "name": "Heart Of A Dragon",
+            "artist": "Ran-D, Brennan Heart, Floor Jansen",
+            "url": "https://open.spotify.com/track/5FKpVXEuq3qsuKeoAlLpnX?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=ba661e45-b16b-4838-9385-27e0d0def735",
+            "cover": "https://i.scdn.co/image/ab67616d00001e020bc7ec2bcb244780a530a742"
+          }
+        },
+        {
+          "rank": 5,
+          "title": "KICKPONG",
+          "artist": "Mutilator",
+          "released": "2026-10-23",
+          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
+          "newEntry": null,
+          "spotify": {
+            "id": "4gwCiRljRZCWp2oqCBW8GJ",
+            "name": "KICKPONG",
+            "artist": "The Saints, Mutilator",
+            "url": "https://open.spotify.com/track/4gwCiRljRZCWp2oqCBW8GJ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=3c1b788d-bd6c-420e-bd7e-ff81123d2939",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02dc9a7106f89d60fce53e1dc3"
+          }
+        }
+      ]
+    }
+  ]
+}

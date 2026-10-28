@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-28T12:21:45.291Z",
+  "results": [
+    {
+      "source": "MuusikaPlaneet",
+      "ok": true
+    },
+    {
+      "source": "House",
+      "ok": false,
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Deep house",
+      "ok": false,
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Hardstyle",
+      "ok": true
+    }
+  ]
+}
