@@ -1,6 +1,14 @@
 (async()=>{
  const {el,format,safeLink,playButton,closePlayer,fetchJSON}=window.Radar;
  const container=document.getElementById('world-charts'),filter=document.getElementById('new-releases');let selected='house';
+ const dnb=document.getElementById('dnb-playlist');
+ document.querySelectorAll('[data-genre]').forEach(button=>button.addEventListener('click',()=>{
+  const isDnb=button.dataset.genre==='drum-and-bass';closePlayer();
+  dnb.hidden=!isDnb;container.hidden=isDnb;filter.closest('label').hidden=isDnb;
+  document.querySelector('#world .explanation').hidden=isDnb;
+  document.querySelectorAll('[data-genre]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  const frame=dnb.querySelector('iframe');if(isDnb)frame.src=frame.dataset.src;else frame.removeAttribute('src');
+ }));
  try{
   const data=await fetchJSON('data/world-charts.json');
   function render(){closePlayer();const genre=data.genres.find(g=>g.id===selected);if(!genre)throw Error('Missing genre');const panel=el('article','panel');const meta=el('div','chart-meta');meta.append(el('h3','',genre.name+' TOP 5'));const stale=Date.now()-Date.parse(genre.asOf+'T23:59:59Z')>8*86400000;meta.append(el('span',stale?'chart-warning':'','Allika seis '+format(genre.asOf+'T12:00:00Z')+(stale?' · Uuendus ootel':'')),safeLink(genre.source+' ↗',genre.url,'text-link'));panel.append(meta);const list=el('ol','chart-list');
@@ -9,6 +17,6 @@
     details.append(el('p','chart-title',track.title),el('p','chart-artist',track.artist),el('p','chart-date',track.released?'Ilmunud '+format(track.released+'T12:00:00Z'):'Ilmumiskuupäev teadmata'));if(track.newEntry)details.append(el('span','chart-new','Uus TOP 5-s'));main.append(details);const actions=el('div','track-actions');if(track.spotify){actions.append(safeLink('Spotify ↗',track.spotify.url));actions.append(playButton({provider:'spotify',type:'track',id:track.spotify.id,url:track.spotify.url},track.spotify.name,host));}else actions.append(safeLink('Allikas ↗',track.url,'text-link'));main.append(actions);row.append(main,host);list.append(row);
    }panel.append(list);if(!tracks.length)panel.append(el('p','state','Selles TOP 5-s pole viimase 30 päeva väljalaskeid. Lülita filter välja, et näha kõiki lugusid.'));const foot=el('p','chart-foot',genre.note+' ');foot.append(safeLink('Täielik edetabel ↗',genre.url));panel.append(foot);container.replaceChildren(panel);
   }
-  document.querySelectorAll('[data-genre]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.genre;document.querySelectorAll('[data-genre]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}));filter.addEventListener('change',render);render();
+  document.querySelectorAll('[data-genre]').forEach(button=>button.addEventListener('click',()=>{if(button.dataset.genre==='drum-and-bass')return;selected=button.dataset.genre;document.querySelectorAll('[data-genre]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}));filter.addEventListener('change',render);render();
  }catch{const p=el('p','state','Edetabeleid ei saanud laadida. Ava allikad: ');[['House','https://www.beatport.com/genre/house/5/top-100'],['Deep house','https://www.beatport.com/genre/deep-house/12/top-100'],['Hardstyle','https://hardstyle.com/en/charts']].forEach(([name,url])=>{p.append(safeLink(name+' ↗ ',url));});container.replaceChildren(p);filter.disabled=true;}
 })();
