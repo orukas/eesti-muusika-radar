@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T16:56:41.784Z",
+  "checkedAt": "2026-11-05T12:34:57.072Z",
   "results": [
     {
       "source": "MuusikaPlaneet",
@@ -17,8 +17,7 @@
     },
     {
       "source": "Hardstyle",
-      "ok": false,
-      "error": "Invalid TOP 5"
+      "ok": true
     }
   ]
 }

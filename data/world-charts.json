@@ -200,7 +200,7 @@
           "artist": "The Saints, Mutilator",
           "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
           "released": null,
-          "newEntry": true
+          "newEntry": false
         },
         {
           "rank": 3,
@@ -223,7 +223,7 @@
           "artist": "Darren Styles, TOZA",
           "url": "https://hardstyle.com/en/tracks/cb8e1696-a402-4e74-b3a0-932c759e74ad/give-it-to-me",
           "released": null,
-          "newEntry": true
+          "newEntry": false
         },
         {
           "rank": 5,
@@ -231,7 +231,7 @@
           "artist": "Brennan Heart, Jonathan Mendelsohn",
           "url": "https://hardstyle.com/en/tracks/d5f55e04-e083-4aef-aa9e-54cfa7c4e4da/come-as-one",
           "released": null,
-          "newEntry": true
+          "newEntry": false
         }
       ]
     }
