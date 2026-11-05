@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02",
+  "checkedAt": "2026-11-05",
   "genres": [
     {
       "id": "house",
@@ -176,8 +176,8 @@
       "name": "Hardstyle",
       "source": "Hardstyle.com",
       "url": "https://hardstyle.com/en/charts?genre=hardstyle",
-      "asOf": "2026-10-28",
-      "note": "Automaatne kontroll ebaõnnestus; säilitatud viimati kontrollitud tabel.",
+      "asOf": "2026-11-05",
+      "note": "Kontrollitud otse allikast. Automaatne pilveuuendus.",
       "tracks": [
         {
           "rank": 1,
@@ -196,6 +196,14 @@
         },
         {
           "rank": 2,
+          "title": "KICKPONG",
+          "artist": "The Saints, Mutilator",
+          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
+          "released": null,
+          "newEntry": true
+        },
+        {
+          "rank": 3,
           "title": "This Feeling",
           "artist": "Da Tweekaz, Rebelion",
           "url": "https://hardstyle.com/en/tracks/2a8ba26b-7ce3-4f50-a991-0fd707084f4c/this-feeling",
@@ -210,49 +218,20 @@
           }
         },
         {
-          "rank": 3,
-          "title": "KICKPONG",
-          "artist": "Mutilator",
-          "url": "https://hardstyle.com/en/tracks/9899c8b9-3461-4edf-83a0-0eb685cd0c5f/kickpong",
-          "released": "2026-10-23",
-          "newEntry": false,
-          "spotify": {
-            "id": "4gwCiRljRZCWp2oqCBW8GJ",
-            "name": "KICKPONG",
-            "artist": "The Saints, Mutilator",
-            "url": "https://open.spotify.com/track/4gwCiRljRZCWp2oqCBW8GJ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=3c1b788d-bd6c-420e-bd7e-ff81123d2939",
-            "cover": "https://i.scdn.co/image/ab67616d00001e02dc9a7106f89d60fce53e1dc3"
-          }
-        },
-        {
           "rank": 4,
-          "title": "Embers",
-          "artist": "D-Block & S-te-Fan",
-          "url": "https://hardstyle.com/en/tracks/3e336efe-80c3-445e-b084-1233f760223d/embers",
-          "released": "2026-10-02",
-          "newEntry": false,
-          "spotify": {
-            "id": "0UnZxfPhkox7pIn7IEzquD",
-            "name": "Embers",
-            "artist": "D-Block & S-te-Fan",
-            "url": "https://open.spotify.com/track/0UnZxfPhkox7pIn7IEzquD?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=1c5c56ac-d1d3-4725-881e-c3f7069d639f",
-            "cover": "https://i.scdn.co/image/ab67616d00001e02c7e2b264b0ed58868b8cc37d"
-          }
+          "title": "GIVE IT TO ME",
+          "artist": "Darren Styles, TOZA",
+          "url": "https://hardstyle.com/en/tracks/cb8e1696-a402-4e74-b3a0-932c759e74ad/give-it-to-me",
+          "released": null,
+          "newEntry": true
         },
         {
           "rank": 5,
-          "title": "Heart Of A Dragon",
-          "artist": "Ran-D, Brennan Heart",
-          "url": "https://hardstyle.com/en/tracks/b467175d-91fb-4efd-8f76-63fbd3a5ae5a/heart-of-a-dragon",
-          "released": "2026-10-09",
-          "newEntry": false,
-          "spotify": {
-            "id": "5FKpVXEuq3qsuKeoAlLpnX",
-            "name": "Heart Of A Dragon",
-            "artist": "Ran-D, Brennan Heart, Floor Jansen",
-            "url": "https://open.spotify.com/track/5FKpVXEuq3qsuKeoAlLpnX?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=ba661e45-b16b-4838-9385-27e0d0def735",
-            "cover": "https://i.scdn.co/image/ab67616d00001e020bc7ec2bcb244780a530a742"
-          }
+          "title": "Come As One",
+          "artist": "Brennan Heart, Jonathan Mendelsohn",
+          "url": "https://hardstyle.com/en/tracks/d5f55e04-e083-4aef-aa9e-54cfa7c4e4da/come-as-one",
+          "released": null,
+          "newEntry": true
         }
       ]
     }

@@ -6,7 +6,7 @@ export function parseHardstyle(html){
  const section=html.split('<h2 class="normalTitle">Hardstyle top 100</h2>')[1];
  if(!section)throw Error('Hardstyle chart heading missing');
  const rows=section.split(/<div class="track listView[^>]*>/).slice(1,6);
- return validate(rows.map((row,i)=>{const link=row.match(/<a href="(\/en\/tracks\/[^" ]+)" title="([^"]+)" class="number">\s*(\d+)/);const artists=[...row.matchAll(/href="\/en\/artists\/[^" ]+" title="([^"]+)"/g)].map(m=>decode(m[1]));if(!link||Number(link[3])!==i+1)throw Error('Unexpected chart rank');return {rank:i+1,title:decode(link[2]),artist:[...new Set(artists)].join(', '),url:'https://hardstyle.com'+link[1],released:null};}));
+ return validate(rows.map((row,i)=>{const link=row.match(/<a href="(\/en\/tracks\/[^" ]+)" title="([^"]+)" class="number">\s*(\d+)/);const artists=[...row.matchAll(/href="\/en\/(?:artists\/|music\?artist=)[^"]+" title="([^"]+)"/g)].map(m=>decode(m[1]));if(!link||Number(link[3])!==i+1)throw Error('Unexpected chart rank');return {rank:i+1,title:decode(link[2]),artist:[...new Set(artists)].join(', '),url:'https://hardstyle.com'+link[1],released:null};}));
 }
 export function validate(tracks){if(tracks.length!==5||tracks.some((t,i)=>t.rank!==i+1||!t.title||!t.artist||!t.url.startsWith('https://'))||new Set(tracks.map(t=>t.url)).size!==5)throw Error('Invalid TOP 5');return tracks;}
 export function parseBeatport(html){
